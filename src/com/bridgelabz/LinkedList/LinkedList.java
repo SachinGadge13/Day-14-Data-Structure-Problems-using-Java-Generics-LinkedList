@@ -96,24 +96,47 @@ public class LinkedList {
 		temp.next = null;
 		System.out.println("Delete last node::");
 	}
-	//create method name as search passing parameter name as int val.
-	public int search ( int val){
-        //check list empty or not
-        if (head == null) {
-            System.out.println("List is Empty");
-            return -1;
-        }
-        int index = 1;
-        Node newNode = head;
-        //while loop is usednew Node is not empty
-        while (newNode != null) {
-            // condition checked if condition is true then break this loop position of 30 is 2
-            if (newNode.data == val) {
-                break;
+
+	// create method name as search passing parameter name as int val.
+	public int search(int val) {
+		// check list empty or not
+		if (head == null) {
+			System.out.println("List is Empty");
+			return -1;
+		}
+		int index = 1;
+		Node newNode = head;
+		// while loop is usednew Node is not empty
+		while (newNode != null) {
+			// condition checked if condition is true then break this loop position of 30 is
+			// 2
+			if (newNode.data == val) {
+				break;
+			}
+			index++;
+			newNode = newNode.next;
+		}
+		return index;
+	}
+	//Method to add a node at the specified position in the list
+	public void insertelement(int position, int data) {
+        Node node = new Node(data);
+        // Point the new node's next to head
+        if (position == 1) {
+            node.next = head;
+            head = node;
+        } else {
+            Node previous = head;
+            int count = 1; // position - 1
+            //while loop is used
+            while (count < position - 1) {
+                //update prev to point to new node
+                previous = previous.next;
+                count++;
             }
-            index++;
-            newNode = newNode.next;
+            Node temp = previous.next;
+            previous.next = node;
+            node.next = temp;
         }
-        return index;
 	}
 }
