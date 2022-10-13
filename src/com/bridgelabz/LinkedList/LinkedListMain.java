@@ -15,9 +15,9 @@ public class LinkedListMain {
 						+ "4. Insert 30 between 56 & 70\n" // uc4
 						+ "5. Ability to delete the first element\n" // uc5
 						+ "6. Delete the last element in the LinkedList\n"// uc6
-						+ "7. Find node with value 30\n"  //uc7
-		                + "8. Insert 40 after 30");//uc8
-
+						+ "7. Find node with value 30\n" // uc7
+						+ "8. Insert 40 after 30\n"// uc8
+						+ "9. Delete the Node");// uc9
 		int option = sc.nextInt();
 		System.out.println();
 		// using switch case,they check the condition if they got condition is true then
@@ -70,12 +70,15 @@ public class LinkedListMain {
 			System.out.println("Position of 30::" + search);
 			break;
 		case 8:
-            linkedList.insert(56);
-            linkedList.insert(30);
-            linkedList.insert(70);
-            linkedList.insertelement(3, 40);
-            linkedList.print();
-            break;
+			linkedList.insert(56);
+			linkedList.insert(30);
+			linkedList.insert(70);
+			linkedList.insertelement(3, 40);
+			linkedList.print();
+			break;
+		case 9:
+			linkedList.deleteANode(40);
+			linkedList.print();
 		}
 	}
 }
