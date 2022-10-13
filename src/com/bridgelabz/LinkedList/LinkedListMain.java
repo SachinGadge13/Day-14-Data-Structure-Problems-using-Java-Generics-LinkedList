@@ -14,7 +14,8 @@ public class LinkedListMain {
                 + "2. Create Linked List by adding 30 and 56 to 70\n"   //uc2
                 + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
                 + "4. Insert 30 between 56 & 70\n" //uc4
-                + "5. Ability to delete the first element\n");//uc5
+                + "5. Ability to delete the first element\n"  //uc5
+                + "6. Delete the last element in the LinkedList\n");//uc6
 		int option = sc.nextInt();
 		System.out.println();
 		//using switch case,they check the condition if they got condition is true then the stop searching and break it.
@@ -49,6 +50,13 @@ public class LinkedListMain {
             linkedList.insert(70);
             int pop = linkedList.pop();
             System.out.println(pop);
+            linkedList.print();
+            break;
+		case 6:
+            linkedList.insert(56);
+            linkedList.insert(30);
+            linkedList.insert(70);
+            linkedList.popLast();
             linkedList.print();
             break;
 		}

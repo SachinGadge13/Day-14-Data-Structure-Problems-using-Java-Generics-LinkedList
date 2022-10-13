@@ -2,15 +2,18 @@ package com.bridgelabz.LinkedList;
 
 public class LinkedList {
 	Node head;
+
 	// class Node that hold data and a reference/link to the next Node in the list
 	class Node {
 		int data;
 		Node next;
+
 		public Node(int data) {
 			this.data = data;
 			this.next = null;
 		}
 	}
+
 	// Method to add a node at the beginning of the list
 	public Node insert(int data) {
 		// Check if the list is empty
@@ -75,5 +78,21 @@ public class LinkedList {
 		popData = head.data;
 		head = head.next;
 		return popData;
+	}
+	// Methodto delete last element in linked list
+	public void popLast() {
+        if (head == null) {
+            System.out.println("Stack is empty");
+        }
+        if (head == null) {
+            System.out.println(head.data);
+            head = null;
+        }
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        System.out.println("Delete last node::");
 	}
 }
