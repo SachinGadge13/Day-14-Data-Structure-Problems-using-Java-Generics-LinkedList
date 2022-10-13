@@ -1,6 +1,7 @@
 package com.bridgelabz.LinkedList;
 import java.util.Scanner;// import scanner class
 
+
 public class LinkedListMain {
 	public static void main(String[] args) {
 		//create object for linkedlist class coz no one method is static in this class
@@ -12,7 +13,8 @@ public class LinkedListMain {
                 + "1. Create a simple LinkedList\n"  //uc1
                 + "2. Create Linked List by adding 30 and 56 to 70\n"   //uc2
                 + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
-                + "4. Insert 30 between 56 & 70\n");//uc4
+                + "4. Insert 30 between 56 & 70\n" //uc4
+                + "5. Ability to delete the first element\n");//uc5
 		int option = sc.nextInt();
 		System.out.println();
 		//using switch case,they check the condition if they got condition is true then the stop searching and break it.
@@ -40,6 +42,14 @@ public class LinkedListMain {
             LinkedList.Node prevNode = linkedList.insert(56);
             linkedList.insert(70);
             linkedList.insertAfter(prevNode,  30);
+            break;
+		case 5:
+            linkedList.insert(56);
+            linkedList.insert(30);
+            linkedList.insert(70);
+            int pop = linkedList.pop();
+            System.out.println(pop);
+            linkedList.print();
             break;
 		}
 	}
