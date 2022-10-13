@@ -11,7 +11,8 @@ public class LinkedListMain {
                 + "Choose your option:\n"
                 + "1. Create a simple LinkedList\n"  //uc1
                 + "2. Create Linked List by adding 30 and 56 to 70\n"   //uc2
-                + "3. Create Linked List by apending 30 and 70 to 56\n" );//uc3
+                + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
+                + "4. Insert 30 between 56 & 70\n");//uc4
 		int option = sc.nextInt();
 		System.out.println();
 		//using switch case,they check the condition if they got condition is true then the stop searching and break it.
@@ -34,6 +35,11 @@ public class LinkedListMain {
             linkedList.insert(30);
             linkedList.insert(70);
             linkedList.print();
+            break;
+		case 4:
+            LinkedList.Node prevNode = linkedList.insert(56);
+            linkedList.insert(70);
+            linkedList.insertAfter(prevNode,  30);
             break;
 		}
 	}

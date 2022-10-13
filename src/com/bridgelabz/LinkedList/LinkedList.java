@@ -46,4 +46,16 @@ public class LinkedList {
          newNode.next = head;
          head = newNode;
      }
+     //create a method for Insert 30 between 56 and 70
+     public void insertAfter(Node prevNode, int value) {
+         //condition is checked
+         if (prevNode == null) {
+             System.out.println("Prev Node should not be null");
+             return;
+         }
+         //create new node inserting 30 btwn 56 and 70
+         Node newNode = new Node(value);
+         newNode.next = prevNode.next;
+         prevNode.next = newNode;
+     }
 }
