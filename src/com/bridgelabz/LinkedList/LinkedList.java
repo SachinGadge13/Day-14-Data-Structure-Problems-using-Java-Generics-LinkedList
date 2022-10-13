@@ -79,20 +79,41 @@ public class LinkedList {
 		head = head.next;
 		return popData;
 	}
+
 	// Methodto delete last element in linked list
 	public void popLast() {
+		if (head == null) {
+			System.out.println("Stack is empty");
+		}
+		if (head == null) {
+			System.out.println(head.data);
+			head = null;
+		}
+		Node temp = head;
+		while (temp.next.next != null) {
+			temp = temp.next;
+		}
+		temp.next = null;
+		System.out.println("Delete last node::");
+	}
+	//create method name as search passing parameter name as int val.
+	public int search ( int val){
+        //check list empty or not
         if (head == null) {
-            System.out.println("Stack is empty");
+            System.out.println("List is Empty");
+            return -1;
         }
-        if (head == null) {
-            System.out.println(head.data);
-            head = null;
+        int index = 1;
+        Node newNode = head;
+        //while loop is usednew Node is not empty
+        while (newNode != null) {
+            // condition checked if condition is true then break this loop position of 30 is 2
+            if (newNode.data == val) {
+                break;
+            }
+            index++;
+            newNode = newNode.next;
         }
-        Node temp = head;
-        while (temp.next.next != null) {
-            temp = temp.next;
-        }
-        temp.next = null;
-        System.out.println("Delete last node::");
+        return index;
 	}
 }
