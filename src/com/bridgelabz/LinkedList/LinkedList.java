@@ -38,4 +38,12 @@ public class LinkedList {
 			temp = temp.next;
 		}
 	}
+	 //create a push method for adding new node and passing parameter
+     public void push ( int data){
+         // Create a new node
+         Node newNode = new Node(data);
+         //new node is head
+         newNode.next = head;
+         head = newNode;
+     }
 }
